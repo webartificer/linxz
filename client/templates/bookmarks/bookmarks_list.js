@@ -1,5 +1,5 @@
 Template.bookmarksList.helpers({
     bookmarks: function() {
-        return Bookmarks.find();
+        return Bookmarks.find().fetch().reverse();
     }
 });

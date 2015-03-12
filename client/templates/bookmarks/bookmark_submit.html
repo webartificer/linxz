@@ -1,0 +1,41 @@
+<template name="bookmarkSubmit">
+  <form class="main form page">
+    <div class="form-group">
+      <label class="control-label" for="url">URL</label>
+      <div class="controls">
+          <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control" required/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value="" placeholder="Name your post" class="form-control" required/>
+      </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Tags</label>
+        <br />
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="off" value="danger" class="tagPicker"> <span class="glyphicon glyphicon-stop text-danger" aria-hidden="true"></span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="off" value="primary" class="tagPicker"> <span class="glyphicon glyphicon-stop text-primary" aria-hidden="true"></span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="off" value="success" class="tagPicker"> <span class="glyphicon glyphicon-stop text-success" aria-hidden="true"></span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="off" value="warning" class="tagPicker"> <span class="glyphicon glyphicon-stop text-warning" aria-hidden="true"></span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="off" value="muted" class="tagPicker"> <span class="glyphicon glyphicon-stop text-muted" aria-hidden="true"></span>
+          </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <hr>
+        <input type="submit" value="Submit" class="btn btn-primary"/>
+    </div>
+  </form>
+</template>
