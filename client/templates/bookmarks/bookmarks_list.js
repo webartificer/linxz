@@ -3,3 +3,15 @@ Template.bookmarksList.helpers({
         return Bookmarks.find().fetch().reverse();
     }
 });
+
+
+// Template.bookmarksList.helpers({
+//   bookmarks: function() {
+//     return BookmarkSearch.getData({
+//       transform: function(matchText, regExp) {
+//         return matchText.replace(regExp, "<b>$&</b>");
+//       },
+//       sort: {isoScore: -1}
+//     });
+//   }
+// });

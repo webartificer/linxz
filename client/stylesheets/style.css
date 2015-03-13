@@ -1,28 +1,38 @@
 
 
 body {
-  background: #263238;
+  background: #222e32;
   color: #666666;
-  padding-top: 90px;
+  padding-top: 75px;
  }
 
-#main {
-  position: relative;
-}
+
 .page {
-  position: absolute;
   top: 0px;
   width: 100%;
 }
 
 .navbar {
-  margin-bottom: 10px;
     height: 75px;
+    background: #fff;
 }
+
+.navbar a {
+    color: silver;
+}
+
+.navbar .navbar-nav > li > a {
+    color: silver;
+}
+
   /* line 32, ../sass/style.scss */
 
 #spinner {
   height: 300px; }
+
+.bookmarks {
+    padding-top: 15px;
+}
 
 .bookmark {
     overflow: hidden;
@@ -37,8 +47,14 @@ body {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .25);
     color: #78909C;
-
+    opacity: .6;
+    cursor: pointer;
 }
+
+.bookmark .bookmark-content:hover {
+    opacity: 1;
+}
+
 
 .bookmark .bookmark-content h3 {
     white-space: nowrap;
@@ -119,6 +135,60 @@ a.bookmarkDelete:hover, a.bookmarkEdit:hover {
 .logo {
     padding-top: 12px;
     padding-left: 10px;
+}
+
+#main {
+    margin: auto;
+    width: 100%;
+}
+
+.main {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#hero {
+    height: 500px;
+    background: #37474f url('/img/dots.png'); /* Old browsers */
+    background: url('img/dots.png'), -moz-radial-gradient(center, ellipse cover,  #37474f 0%, #263238 100%); /* FF3.6+ */
+    background: url('img/dots.png'), -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#37474f), color-stop(100%,#263238)); /* Chrome,Safari4+ */
+    background: url('img/dots.png'), -webkit-radial-gradient(center, ellipse cover,  #37474f 0%,#263238 100%); /* Chrome10+,Safari5.1+ */
+    background: url('img/dots.png'), -o-radial-gradient(center, ellipse cover,  #37474f 0%,#263238 100%); /* Opera 12+ */
+    background: url('img/dots.png'), -ms-radial-gradient(center, ellipse cover,  #37474f 0%,#263238 100%); /* IE10+ */
+    background: url('img/dots.png'), radial-gradient(ellipse at center,  #37474f 0%,#263238 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37474f', endColorstr='#263238',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border-bottom: 1px solid rgba(120,144,160,.25);
+ }
+
+
+
+#hero div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    text-align: center;
+
+}
+
+#hero div img {
+    max-width: 90%;
+    margin: auto;
+}
+
+#hero h2 {
+    font-weight: 100;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'Helvetica Neue';
+    opacity: 1;
+    font-size: 2em;
+    padding: 10px;
+    margin: 0;
+    text-shadow: 1px 1px 3px #222e32;
 }
 
 /* .bookmark {
