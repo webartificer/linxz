@@ -1,7 +1,11 @@
 Template.bookmarksList.helpers({
     bookmarks: function() {
         return Bookmarks.find().fetch().reverse();
-    }
+    },
+
+    ownPost: function() {
+      return this.userId === Meteor.userId();
+    },
 });
 
 

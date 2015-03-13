@@ -1,0 +1,49 @@
+<template name="bookmarkEdit">
+
+  <form class="main form page">
+    <div class="form-group">
+      <label class="control-label" for="url">URL</label>
+      <div class="controls">
+          <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your post" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">Tags</label>
+        <br />
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="on" value="danger" class="tagPicker"> <span class="glyphicon glyphicon-stop text-danger" aria-hidden="true"></span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="on" value="primary" class="tagPicker"> <span class="glyphicon glyphicon-stop text-primary" aria-hidden="true"></span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="on" value="success" class="tagPicker"> <span class="glyphicon glyphicon-stop text-success" aria-hidden="true"></span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="on" value="warning" class="tagPicker"> <span class="glyphicon glyphicon-stop text-warning" aria-hidden="true"></span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="tag[]" autocomplete="on" value="muted" class="tagPicker"> <span class="glyphicon glyphicon-stop text-muted" aria-hidden="true"></span>
+          </label>
+        </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="title">Status</label>
+      <div class="controls">
+          <input name="status" id="status" type="text" value="{{status}}" placeholder="Status" class="form-control"/>
+      </div>
+    </div>
+
+    <hr/>
+    <input type="submit" value="Submit" class="btn btn-primary submit verify"/> <a href="{{pathFor 'bookmarksList'}}" class="btn btn-default">Cancel</a><a class="btn btn-danger delete pull-right" href="#">Delete</a>
+  </form>
+
+</template>

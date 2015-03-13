@@ -23,21 +23,31 @@ body {
 
 .navbar .navbar-nav > li > a {
     color: silver;
+    line-height: 45px;
+}
+
+.navbar-nav {
+    height: 75px;
+    line-height: 75px;
 }
 
   /* line 32, ../sass/style.scss */
 
 #spinner {
-  height: 300px; }
+    height: 300px;
+    color: white;
+    fill: white;
+ }
 
 .bookmarks {
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 .bookmark {
     overflow: hidden;
     padding: 5px;
     background: transparant;
+    border-radius: 1px solid #222e32
 
 }
 
@@ -47,9 +57,15 @@ body {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .25);
     color: #78909C;
-    opacity: .6;
+    opacity: .2;
     cursor: pointer;
+    transition: all .3s ease;
 }
+
+.bookmark .bookmark-content.true {
+    opacity: .6;
+}
+
 
 .bookmark .bookmark-content:hover {
     opacity: 1;
@@ -104,6 +120,7 @@ body {
 
 .bookmark a {
     color: white;
+    text-decoration: none;
 }
 
 .bookmark h3 {
@@ -132,6 +149,10 @@ a.bookmarkDelete:hover, a.bookmarkEdit:hover {
     color: white;
 }
 
+
+
+
+
 .logo {
     padding-top: 12px;
     padding-left: 10px;
@@ -143,11 +164,9 @@ a.bookmarkDelete:hover, a.bookmarkEdit:hover {
 }
 
 .main {
-    background: white;
+    background: rgba(255,255,255,.9);
     padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: auto;
+    margin: 1px auto;
 }
 
 #hero {
@@ -189,6 +208,15 @@ a.bookmarkDelete:hover, a.bookmarkEdit:hover {
     padding: 10px;
     margin: 0;
     text-shadow: 1px 1px 3px #222e32;
+}
+
+.statusbar {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,.25);
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /* .bookmark {

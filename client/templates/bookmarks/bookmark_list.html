@@ -1,7 +1,10 @@
 <template name="bookmarksList">
-  <div class="bookmarks container-fluid">
-    {{#each bookmarks}}
-      {{> bookmarkItem}}
-    {{/each}}
-  </div>
+    <div class="bookmarks container-fluid">
+        <!-- {{#if ownPost}} -->
+            {{#each bookmarks}}
+                  {{> bookmarkItem}}
+            {{/each}}
+        <!-- {{/if}} -->
+    </div>
+    {{> counter}}
 </template>

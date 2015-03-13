@@ -1,6 +1,6 @@
 <template name="bookmarkItem">
   <div class="bookmark col-xs-6 col-sm-4 col-md-3 hvr-pop">
-    <div class="bookmark-content">
+    <div class="bookmark-content {{status}}">
       <h3><a href="{{url}}">{{title}}</a></h3>
       <span>{{domain}}</span>
       <div class="tagbox">
@@ -9,8 +9,9 @@
           {{/each}}
       </div>
       <small>{{timestamp}}</small>
-    <a href="{{pathFor 'bookmarkPage'}}" class="bookmarkEdit"><i class="fa fa-ellipsis-h"></i></a>
-    <a href="{{pathFor 'bookmarkPage'}}" class="bookmarkDelete"><i class="fa fa-times"></i></a>
+
+      <a href="{{pathFor 'bookmarkEdit'}}" class="bookmarkEdit"><i class="fa fa-ellipsis-h"></i></a>
+    <a href="#" class="bookmarkDelete"><i class="fa fa-times"></i></a>
     </div>
   </div>
 </template>
