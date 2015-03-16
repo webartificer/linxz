@@ -9,7 +9,11 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="{{pathFor 'bookmarksList'}}"><img src="/img/chainlinxz.svg" class="logo"></a>
+        {{> esInput index="bookmarks" placeholder="Search..." allDocsOnEmpty="true" sort="natural" timeout=300 class="searchbar"}}
+        <input type="submit" class="btn btn-primary searchPrimary" value="primary">
       </div>
+
+
       <div class="collapse navbar-collapse" id="navigation">
           <ul class="nav navbar-nav">
             {{#if currentUser}}<li><a href="{{pathFor 'bookmarkSubmit'}}">Add Bookmark</a></li>{{/if}}

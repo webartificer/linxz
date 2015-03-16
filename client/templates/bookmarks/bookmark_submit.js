@@ -13,6 +13,7 @@ Template.bookmarkSubmit.events({
 
         bookmark._id = Bookmarks.insert(bookmark);
         Router.go('bookmarksList', bookmark);
+        Meteor.call('checkurls');
     }
 
 

@@ -1,10 +1,29 @@
 <template name="bookmarksList">
     <div class="bookmarks container-fluid">
-        <!-- {{#if ownPost}} -->
-            {{#each bookmarks}}
-                  {{> bookmarkItem}}
-            {{/each}}
-        <!-- {{/if}} -->
+
+
+
+
+                {{#esEach index="bookmarks"}}
+                    {{> bookmarkItem}}
+                {{/esEach}}
+
+                {{#ifEsHasNoResults index="bookmarks"}}
+                    <div class="no-results">No results found!</div>
+                {{/ifEsHasNoResults}}
+
+                {{#ifEsIsSearching index="bookmarks"}}
+                    {{> loading}}
+                {{/ifEsIsSearching}}
+
+
+
+<!-- {{#if ownPost}}
+    {{#each bookmarks}}
+        {{> bookmarkItem}}
+    {{/each}} -->
+<!-- {{/if}} -->
+
     </div>
     {{> counter}}
 </template>

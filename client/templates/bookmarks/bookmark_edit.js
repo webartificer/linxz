@@ -10,7 +10,7 @@ Template.bookmarkEdit.events({
       tags: $('input.tagPicker:checkbox:checked').map(function() {
           return this.value;
         }).get(),
-      status: $(e.target).find('[name=status]').val()
+    //   status: $(e.target).find('[name=status]').val()
 
   };
 
@@ -20,6 +20,7 @@ Template.bookmarkEdit.events({
         alert(error.reason);
       } else {
         Router.go('bookmarksList', {_id: currentBookmarkId});
+        Meteor.call('checkurls');
       }
     });
   },
@@ -33,5 +34,6 @@ Template.bookmarkEdit.events({
       Router.go('bookmarksList');
     }
 },
+
 
 });
