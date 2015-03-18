@@ -1,15 +1,16 @@
 <template name="bookmarksList">
-    <div class="bookmarks container-fluid">
+    <div class="bookmarks container">
 
-
-
-
-                {{#esEach index="bookmarks"}}
+                {{#esEach index="bookmarks" logic="AND"}}
                     {{> bookmarkItem}}
                 {{/esEach}}
 
                 {{#ifEsHasNoResults index="bookmarks"}}
-                    <div class="no-results">No results found!</div>
+                    <div class="no-results">
+                        <i class="fa fa-exclamation-triangle fa-5x"></i>
+                        <h1>No results found!</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptatibus mollitia, suscipit, ratione vitae, velit facilis commodi minima quo a placeat magni cupiditate amet labore, quos consequatur modi quaerat aspernatur.</p>
+                    </div>
                 {{/ifEsHasNoResults}}
 
                 {{#ifEsIsSearching index="bookmarks"}}
@@ -17,13 +18,11 @@
                 {{/ifEsIsSearching}}
 
 
+<!--                 {{#each bookmarks}}
+    {{> bookmarkItem}}
+{{/each}} -->
 
-<!-- {{#if ownPost}}
-    {{#each bookmarks}}
-        {{> bookmarkItem}}
-    {{/each}} -->
-<!-- {{/if}} -->
 
     </div>
-    {{> counter}}
+
 </template>

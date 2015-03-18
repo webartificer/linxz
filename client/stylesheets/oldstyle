@@ -184,6 +184,7 @@ a.bookmarkDelete:hover, a.bookmarkEdit:hover {
     background: url('img/dots.png'), radial-gradient(ellipse at center,  #37474f 0%,#263238 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37474f', endColorstr='#263238',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     border-bottom: 1px solid rgba(120,144,160,.25);
+    opacity: .9;
  }
 
 
@@ -228,6 +229,13 @@ a.bookmarkDelete:hover, a.bookmarkEdit:hover {
     width: 200px;
     line-height: 45px;
     padding-left: 10px;
+}
+
+video#vid {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background-size: cover;
 }
 
 /* .bookmark {

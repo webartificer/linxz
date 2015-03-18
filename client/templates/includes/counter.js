@@ -1,12 +1,12 @@
 Template.counter.helpers({
     goodCount: function() {
-        return Bookmarks.find({status:true}).count();
+        return Bookmarks.find({status:true, userId:Meteor.userId()}).count();
     },
     badCount: function() {
-        return Bookmarks.find({status:false}).count();
+        return Bookmarks.find({status:false, userId:Meteor.userId()}).count();
     },
     totalCount: function() {
-        return Bookmarks.find().count();
+        return Bookmarks.find({userId:Meteor.userId()}).count();
     },
 });
 

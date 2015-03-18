@@ -1,6 +1,6 @@
 Template.bookmarksList.helpers({
     bookmarks: function() {
-        return Bookmarks.find().fetch();
+        return Bookmarks.find({userId:Meteor.userId()}).fetch();
     },
 
     ownPost: function() {

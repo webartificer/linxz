@@ -7,7 +7,8 @@ Template.bookmarkSubmit.events({
         tags: $('input.tagPicker:checkbox:checked').map(function() {
             return this.value;
         }).get(),
-        timestamp: new Date()
+        timestamp: new Date(),
+        userId: Meteor.userId()
     };
 
 

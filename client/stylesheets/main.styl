@@ -1,0 +1,609 @@
+@import 'jeet'
+@import 'rupture'
+@import 'nib'
+@import '_normalize'
+
+
+pageWidth = 1200px
+pagePad = 25px
+
+blueGrey1000 = #1a2326
+blueGrey900 = #212c31
+blueGrey800 = #37474F
+blueGrey700 = #455A64
+blueGrey600 = #546E7A
+blueGrey500 = #607D8B
+blueGrey400 = #78909C
+blueGrey300 = #90A4AE
+blueGrey200 = #B0BEC5
+blueGrey100 = #CFD8DC
+blueGrey50 = #ECEFF1
+
+linxzRed = #D0021B
+linxzRedDark = #a50018
+
+*
+  box-sizing border-box
+
+html
+    height 100%
+
+body
+    background blueGrey900
+    height 100%
+    font-family: "proxima-nova", sans-serif
+    color blueGrey100
+
+.page
+    margin-top 100px
+
+a, a:hover
+    text-decoration none
+
+header
+    height 75px
+    color white
+    position fixed
+    width 100%
+    background white
+    top 0
+    z-index 1
+    opacity .95
+
+    .container
+        center(pageWidth,pagePad)
+        height 100%
+
+        #logo
+            column(3/12)
+            height 75px
+            position relative
+            overflow hidden
+
+            img
+                position relative
+                margin-top 27px
+                max-width 100%
+
+        #search
+            column(6/12, gutter: 1)
+            display block
+            position relative
+
+            input
+                width 100%
+                border-radius 20px
+                height 40px
+                margin 17px 0
+                padding 0 15px
+                outline none
+                border 2px solid blueGrey100
+                color blueGrey1000
+                font-size 1.25em
+                transition border .4s ease
+
+                &:focus
+                    border 2px solid linxzRed
+
+            .clear
+                color blueGrey100
+                position absolute
+                top 19px
+                right 9px
+                font-size 2em
+
+
+        #add
+            column(1/12)
+            i
+                height 30px
+                width 30px
+                line-height 28px
+                margin 23px 0
+                text-align center
+                color blueGrey100
+                background white
+                border solid 2px blueGrey100
+                border-radius 20px
+                transition all .2s ease
+                font-size .85em
+                &:hover
+                    color white
+                    background linxzRed
+                    border solid 2px linxzRed
+
+                a
+                    color white
+
+
+
+        #loginbuttons
+            column(2/12)
+    a
+        color blueGrey900
+        text-decoration none
+        &:hover
+            color linxzRed
+            text-decoration none
+
+#main
+    .container
+        center(pageWidth, pagePad)
+        padding-top 100px
+
+
+        .bookmark
+            column(1/1, gutter: 1)
+            background blueGrey800
+            position: relative;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+            color: #78909C;
+            opacity: .2;
+            cursor: pointer;
+            transition: opacity .2s ease;
+            margin-bottom 10px
+            border-radius 5px
+
+            +between(500px, 699px)
+                column(1/2, cycle: 2, gutter: 2)
+
+            +between(700px, 899px)
+                column(1/3, cycle: 3, gutter: 1.5)
+
+            +above(900px)
+                column(1/4, cycle: 4, gutter: 1)
+
+
+        .bookmark .bookmark-content h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 80%;
+        }
+
+        .bookmark .bookmark-content small {
+            display: none;
+        }
+
+        .bookmark .bookmark-content .tagbox {
+            position: absolute;
+            display: table;
+            top: 0;
+            left: 0;
+            right 0
+            height: 10px;
+            width: 100%;
+            background: #455A64;
+            box-shadow 0 0 2px blueGrey1000
+        }
+
+        .bookmark .bookmark-content .tagblock {
+            display: table-cell;
+        }
+
+
+
+
+        .bookmark .bookmark-content .red {
+            background: #F44336
+        }
+
+        .bookmark .bookmark-content .blue {
+            background: #03A9F4
+        }
+
+        .bookmark .bookmark-content .green {
+            background: #4CAF50
+        }
+
+        .bookmark .bookmark-content .yellow {
+            background: #FFC107
+        }
+
+        .bookmark .bookmark-content .silver {
+            background: #9E9E9E
+        }
+
+        .bookmark a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .bookmark h3 {
+            font-size: 1.25em;
+            line-height: 1.25em;
+            font-weight: normal;
+            margin: 10px 0 0 0;
+            padding: 0;
+        }
+
+        .bookmark .bookmarkEdit {
+            position: absolute;
+            right: 15px;
+            top: 45px;
+            color: #78909C;
+        }
+
+        .bookmark .bookmarkDelete {
+            position: absolute;
+            right: 15px;
+            top: 18px;
+            color: #78909C;
+        }
+
+        a.bookmarkDelete:hover, a.bookmarkEdit:hover {
+            color: white;
+        }
+        .true {
+            opacity: 1;
+
+        }
+
+
+
+#hero
+    position relative
+    height 100vh
+    display block
+    // background url(img/dots.png)
+    background radial-gradient(blueGrey800, blueGrey1000)
+
+    .dots
+        width 100%
+        height 100%
+        background url(img/dots.png)
+
+        .caption
+            margin 0 40px
+            position relative
+            text-align center
+            top 55%
+            transform translateY(-50%)
+
+            img
+                max-width: 75%
+
+            h2
+                color white
+                font-weight 100
+                font-size 1.5em
+                text-shadow 2px 2px 4px blueGrey1000
+                padding-bottom 3em
+
+                +above(700px)
+                    font-size 1.75em
+
+            .button
+                border solid 1px white
+                padding .5em 2em
+                color white
+                text-decoration none
+                font-size 1.5em
+                border-radius 3px
+                margin-top 3em
+                font-weight 200
+
+
+.dark
+    background blueGrey1000
+
+.nobreak
+    white-space nowrap
+
+section.content
+    border-top solid 1px blueGrey900
+    padding 15% 0
+    color white
+
+    .container
+        center(pageWidth,pagePad)
+        text-align center
+
+
+        h2
+
+            font-weight 900
+            font-size 1.75em
+            +above(700px)
+                font-size 2.25em
+            +above(900px)
+                font-size 2.75em
+
+        p
+            font-size 1.15em
+            opacity .6
+            font-weight 100
+            +above(700px)
+                font-size 1.35em
+            +above(900px)
+                font-size 1.75em
+
+
+
+.libraries_big
+
+    +above(700px)
+        column(7/8, offset: 1/16)
+    +above(900px)
+        column(3/4, offset: 1/8)
+
+    p
+        text-align center
+        font-size .9em
+
+    img
+        max-width 400px
+        width 90%
+        padding-top 3em
+
+    .libraries_small
+        column(1/2, cycle: 2)
+        +above(600px)
+            column(1/2, cycle: 2, gutter: 10)
+
+#login-buttons
+    float right
+    color blueGrey1000
+    position absolute
+    top 0
+    right 0
+
+.login-link-and-dropdown-list
+    background white
+    padding 25px
+
+.login-close-text
+    background red
+    padding 5px 10px
+    position absolute
+    bottom 10px
+
+.login-link-text
+    float right
+    text-align right
+    cursor pointer
+
+#login-dropdown-list
+    float right
+    list-style none
+
+.dropdown-toggle
+    text-align right
+    right 0
+    position absolute
+    height 75px
+    line-height 75px
+    white-space nowrap
+
+
+.dropdown-menu
+    right 0
+    float right
+    margin-left -100px
+    position relative
+    top 50px
+    border-bottom-right-radius 5px
+    border-bottom-left-radius 5px
+    border-top-right-radius 0
+    border-top-left-radius 0
+    box-shadow none
+    border none
+
+.btn-primary
+    background linxzRed
+    border none
+    padding 10px 20px
+    font-size 1.25em
+    text-transform uppercase
+    font-weight 600
+
+
+    &:hover
+        background linxzRedDark
+
+.form-control
+    font-size 1.25em
+    padding 10px
+    height auto
+
+
+footer
+    height 50px
+    text-align center
+    background blueGrey1000
+    line-height 50px
+    color blueGrey700
+    font-size 1em
+
+    .container
+        center(pageWidth,pagePad)
+
+    .footerleft
+        column(1/2)
+        text-align left
+        font-weight 700
+
+        .bad
+            color linxzRed
+            padding 0 4px
+            border solid 1px linxzRed
+            opacity .5
+
+
+        .good
+            color #128a00
+            padding 0 4px
+            border solid 1px #128a00
+            opacity .5
+
+
+        .total, .verify
+            color blueGrey400
+            padding 0 4px
+            border solid 1px blueGrey400
+            opacity .5
+
+        .bad, .good, .total, .verify
+            cursor pointer
+            margin-right 3px
+            &:hover
+                opacity 1
+
+
+    .footerright
+        column(1/2)
+        text-align right
+
+    .footer
+        column(1/1)
+        text-align center
+
+    i
+        color linxzRed
+
+.page_wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px;
+}
+.page_wrap:after {
+  content: "";
+  display: block;
+}
+footer, .page_wrap:after {
+  height: 50px;
+}
+
+
+
+.editurl
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background blueGrey1000
+    z-index 5
+
+    .fpform
+        center(90%)
+        max-width 700px
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .fgroup
+            padding 5px
+            margin-top 30px
+            center(90%)
+
+            h1
+                font-size 3em
+                font-weight 800
+
+            .submit, .delete
+                margin-top 30px
+
+            a
+                color white;
+
+
+
+            .btn-group
+                .btn-default
+                    width 50px
+                    height 20px
+                    border-color blueGrey1000
+                    border-radius 0
+
+
+            label
+                display block
+                font-size 1.25em
+                line-height 1.25em
+                color blueGrey700
+                padding-right 10px
+
+
+            input[type="text"]
+                background transparent
+                border none
+                display block
+                font-size 2em
+                outline none
+                border-bottom 2px dotted blueGrey500
+                padding 0 0 5px 0
+                width 100%
+                color blueGrey500
+
+                &:focus
+                    color white
+
+
+
+            .active
+                opacity 1
+
+            .red
+                background #F44336
+
+            .green
+                background #4CAF50
+
+            .blue
+                background #03A9F4
+
+            .yellow
+                background #FFC107
+
+            .silver
+                background #9E9E9E
+
+
+    .tagPicker
+        width 25px
+        height 25px
+        display inline-block
+        border-radius 50%
+        opacity .15
+        margin-right 10px
+
+
+
+    .closef
+        position absolute
+        top 25px
+        right 25px
+        color white
+        opcity 1
+        font-size 2em
+
+.active
+    opacity 1
+
+.no-results
+    center(400px)
+    text-align center
+
+    h1
+        font-weight 800
+        font-size 3em
+
+    i
+        opacity .2
+        margin-top 35px
+
+
+.clearfix:before,
+.clearfix:after
+    content " "
+    display table
+
+
+.clearfix:after
+    clear both
+
+
+.clearfix
+    *zoom 1

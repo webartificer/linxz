@@ -1,41 +1,81 @@
 <template name="bookmarkSubmit">
-  <form class="main form page">
-    <div class="form-group">
-      <label class="control-label" for="url">URL</label>
-      <div class="controls">
-          <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control" required/>
+    <form class="editurl">
+      <div class="fpform">
+
+          <div class="fgroup">
+              <h1><i class="fa fa-bookmark-o"></i> Add Bookmark</h1>
+              <label class="" for="url">URL</label>
+              <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class=""/>
+          </div>
+          <div class="fgroup">
+              <label class="" for="title">Title</label>
+              <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your bookmark" class=""/>
+          </div>
+          <div class="fgroup">
+              <label class="">Tags</label>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default red">
+                  <input type="checkbox" name="tag[]" value="red" class="tagPicker red">
+                </label>
+                <label class="btn btn-default blue">
+                  <input type="checkbox" name="tag[]" value="blue" class="tagPicker blue">
+                </label>
+                <label class="btn btn-default green">
+                  <input type="checkbox" name="tag[]" value="green" class="tagPicker green">
+                </label>
+                <label class="btn btn-default yellow">
+                  <input type="checkbox" name="tag[]" value="yellow" class="tagPicker yellow">
+                </label>
+                <label class="btn btn-default silver">
+                  <input type="checkbox" name="tag[]" value="silver" class="tagPicker silver">
+                </label>
+              </div>
+          </div>
+
+
+          <div class="fgroup">
+              <input type="submit" value="Submit" class="btn btn-primary submit verify"/> <a class="btn btn-primary delete pull-right" href="#"><i class="fa fa-trash-o"></i></a>
+          </div>
       </div>
+      <a href="{{pathFor 'bookmarksList'}}" class="closef"><i class="fa fa-times"></i></a>
+    </form>
+<!--   <form class="main form page">
+  <div class="form-group">
+    <label class="control-label" for="url">URL</label>
+    <div class="controls">
+        <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control" required/>
     </div>
-    <div class="form-group">
-      <label class="control-label" for="title">Title</label>
-      <div class="controls">
-          <input name="title" id="title" type="text" value="" placeholder="Name your post" class="form-control" required/>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="title">Title</label>
+    <div class="controls">
+        <input name="title" id="title" type="text" value="" placeholder="Name your post" class="form-control" required/>
+    </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label">Tags</label>
+      <br />
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default">
+          <input type="checkbox" name="tag[]" autocomplete="off" value="danger" class="tagPicker"> <span class="glyphicon glyphicon-stop text-danger" aria-hidden="true"></span>
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" name="tag[]" autocomplete="off" value="primary" class="tagPicker"> <span class="glyphicon glyphicon-stop text-primary" aria-hidden="true"></span>
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" name="tag[]" autocomplete="off" value="success" class="tagPicker"> <span class="glyphicon glyphicon-stop text-success" aria-hidden="true"></span>
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" name="tag[]" autocomplete="off" value="warning" class="tagPicker"> <span class="glyphicon glyphicon-stop text-warning" aria-hidden="true"></span>
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" name="tag[]" autocomplete="off" value="muted" class="tagPicker"> <span class="glyphicon glyphicon-stop text-muted" aria-hidden="true"></span>
+        </label>
       </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label">Tags</label>
-        <br />
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-default">
-            <input type="checkbox" name="tag[]" autocomplete="off" value="danger" class="tagPicker"> <span class="glyphicon glyphicon-stop text-danger" aria-hidden="true"></span>
-          </label>
-          <label class="btn btn-default">
-            <input type="checkbox" name="tag[]" autocomplete="off" value="primary" class="tagPicker"> <span class="glyphicon glyphicon-stop text-primary" aria-hidden="true"></span>
-          </label>
-          <label class="btn btn-default">
-            <input type="checkbox" name="tag[]" autocomplete="off" value="success" class="tagPicker"> <span class="glyphicon glyphicon-stop text-success" aria-hidden="true"></span>
-          </label>
-          <label class="btn btn-default">
-            <input type="checkbox" name="tag[]" autocomplete="off" value="warning" class="tagPicker"> <span class="glyphicon glyphicon-stop text-warning" aria-hidden="true"></span>
-          </label>
-          <label class="btn btn-default">
-            <input type="checkbox" name="tag[]" autocomplete="off" value="muted" class="tagPicker"> <span class="glyphicon glyphicon-stop text-muted" aria-hidden="true"></span>
-          </label>
-        </div>
-    </div>
-    <div class="form-group">
-        <hr>
-        <input type="submit" value="Submit" class="btn btn-primary verify"/>
-    </div>
-  </form>
+  </div>
+  <div class="form-group">
+      <hr>
+      <input type="submit" value="Submit" class="btn btn-primary verify"/>
+  </div>
+</form> -->
 </template>

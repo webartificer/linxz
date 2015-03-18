@@ -1,0 +1,13 @@
+<template name="footer">
+    <footer>
+        <div class="container">
+            {{#if currentUser}}
+                <div class="footerleft">{{> counter}}</div>
+                <div class="footerright">Made With <i class="fa fa-heart-o"></i> in Boulder, Co.</div>
+
+            {{else}}
+            <div class="footer">Made With <i class="fa fa-heart-o"></i> in Boulder, Co.</div>
+            {{/if}}
+        </div>
+    </footer>
+</template>

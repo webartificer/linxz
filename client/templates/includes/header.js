@@ -15,4 +15,6 @@ Template.header.events({
       EasySearch.changeProperty('bookmarks', 'filteredCategory', $(e.target).val());
       instance.triggerSearch();
     },
+
+
 });
